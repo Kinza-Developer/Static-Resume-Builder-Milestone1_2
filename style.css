@@ -77,7 +77,12 @@ form button:hover {
     margin: 5px 0;
     padding: 5px;
     background-color: #f9f9f9;
-    border-left: 4px solid #28a745;
     padding-left: 10px;
     border-radius: 3px;
+}
+
+#generated-resume [contenteditable="true"] {
+    border: 1px dashed #ddd;
+    padding: 8px;
+    cursor: text;
 }

@@ -1,30 +1,30 @@
-const toggleEducationButton = document.getElementById('toggle-education')!;
-const educationSection = document.getElementById('education')!;
+const form = document.getElementById('resume-form') as HTMLFormElement;
 
-toggleEducationButton.addEventListener('click', () => {
-    if (educationSection.style.display === 'none') {
-        educationSection.style.display = 'block';
-    } else {
-        educationSection.style.display = 'none';
-    }
-});
-const toggleSkillsButton = document.getElementById('toggle-skills')!;
-const skillsSection = document.getElementById('skills')!;
+// Get the display elements
+const displayName = document.getElementById('display-name')!;
+const displayEmail = document.getElementById('display-email')!;
+const displayEducation = document.getElementById('display-education')!;
+const displayWork = document.getElementById('display-work')!;
+const displaySkills = document.getElementById('display-skills')!;
+const resumeSection = document.getElementById('generated-resume')!;
 
-toggleSkillsButton.addEventListener('click', () => {
-    if (skillsSection.style.display === 'none') {
-        skillsSection.style.display = 'block';
-    } else {
-        skillsSection.style.display = 'none';
-    }
-});
-const toggleWorkExperienceButton = document.getElementById('toggle-work-experience')!;
-const workExperienceSection = document.getElementById('work-experience')!;
+form.addEventListener('submit', (e) => {
+    e.preventDefault();  // Prevent page reload
 
-toggleWorkExperienceButton.addEventListener('click', () => {
-    if (workExperienceSection.style.display === 'none') {
-        workExperienceSection.style.display = 'block';
-    } else {
-        workExperienceSection.style.display = 'none';
-    }
+    // Get user input from the form
+    const name = (document.getElementById('name') as HTMLInputElement).value;
+    const email = (document.getElementById('email') as HTMLInputElement).value;
+    const education = (document.getElementById('education') as HTMLInputElement).value;
+    const work = (document.getElementById('work') as HTMLInputElement).value;
+    const skills = (document.getElementById('skills') as HTMLInputElement).value;
+
+    // Update the resume dynamically
+    displayName.textContent = `Name: ${name}`;
+    displayEmail.textContent = `Email: ${email}`;
+    displayEducation.textContent = `Education: ${education}`;
+    displayWork.textContent = `Work Experience: ${work}`;
+    displaySkills.textContent = `Skills: ${skills}`;
+
+    // Show the generated resume section
+    resumeSection.classList.remove('hidden');
 });

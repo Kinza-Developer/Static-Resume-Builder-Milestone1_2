@@ -3,44 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Static Resume Builder</title>
+    <title>Dynamic Resume Builder</title>
+    <!-- Link to CSS file -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <header>
-            <div class="personal-info">
-                <h1><u>Kinza M.Ayub</u></h1>
-                <p><b>Contact Details:</b> <a href="mailto:ubaidullahmayub203@gmail.com">ubaidullahmayub203@gmail.com</a> | <a href="phone:+92 3313668606">+92 3313668606</a></p>
-                <img src="profile.jpg" alt="Profile Picture">
-            </div>
-        </header>
-        <section id="education">
-            <h2><u>Education</u></h2>
-            <ul>
-                <li>Under Diploma of Associate Engineers (DAE) in CIT at Muhammad Shafi Educational Complex</li>
-                <li>Matriculation in Computer Science (TSC) From Muhammad Shafi Technical School in 2022</li>
-            </ul>
-        </section>
-        <section id="skills">
-            <h2><u>Skills</u></h2>
-            <ul>
-                <li><b>Programming Languages:</b> C, C++ and Java (under learning)</li>
-                <li><b>Web development:</b>  HTML, CSS, Typescript, JavaScript (under learning) </li>
-                <li><b>Graphics Designing:</b> Adobe Photoshop</li>
-                <li><b>Tools/Softwares:</b> VS Code & Adobe Photoshop</li>
-            </ul>
-        </section>
-        <section id="work-experience">
-            <h2><u>Work Experience</u></h2>
-            <ul>
-                <li>Fresh</li>
-            </ul>
-        </section>
-        <button id="toggle-education">Toggle Education </button>
-        <button id="toggle-skills">Toggle Skills </button>
-        <button id="toggle-work-experience">Toggle Work Experience </button>
-    </div>
-    <script src="script.js"></script>
+
+    <!-- Form for user input -->
+    <form id="resume-form">
+        <h1>Fill out your Resume</h1>
+
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br>
+
+        <label for="education">Education:</label>
+        <input type="text" id="education" name="education" required><br>
+
+        <label for="work">Work Experience:</label>
+        <input type="text" id="work" name="work" required><br>
+
+        <label for="skills">Skills:</label>
+        <input type="text" id="skills" name="skills" required><br>
+
+        <button type="submit"><b>Generate Resume</b></button>
+    </form>
+
+    <!-- Dynamic Resume Display -->
+    <section id="generated-resume" class="hidden">
+        <h2>Your Resume</h2>
+        <p id="display-name"></p>
+        <p id="display-email"></p>
+        <p id="display-education"></p>
+        <p id="display-work"></p>
+        <p id="display-skills"></p>
+    </section>
+    <!-- Link to JavaScript file (compiled from TypeScript) -->
+    <script src="script.js" defer></script>
 </body>
 </html>

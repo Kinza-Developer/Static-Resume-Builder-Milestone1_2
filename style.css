@@ -1,0 +1,65 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(102, 101, 101);
+}
+
+.container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1em;
+    text-align: center;
+}
+
+.personal-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.personal-info a {
+    color: rgb(108, 108, 192);
+}
+
+.personal-info img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-top: 1em;
+}
+
+section {
+    padding: 1em;
+    margin-bottom: 2em;
+    border-bottom: 1px solid #ccc;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+section h2 {
+    margin-top: 0;
+}
+
+button{
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 0.5em 1em;
+    cursor: pointer;
+    margin-left: 12%;
+    margin-bottom: 2%;
+    margin-top: 1%;
+}
+
+button:hover {
+    background-color: #555;
+}

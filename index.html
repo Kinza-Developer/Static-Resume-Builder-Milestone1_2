@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dynamic Resume Builder</title>
+    <title>Editable Resume Builder</title>
     <!-- Link to CSS file -->
     <link rel="stylesheet" href="style.css">
 </head>
@@ -31,14 +31,14 @@
         <button type="submit"><b>Generate Resume</b></button>
     </form>
 
-    <!-- Dynamic Resume Display -->
+    <!-- Editable Dynamic Resume Display -->
     <section id="generated-resume" class="hidden">
         <h2>Your Resume</h2>
-        <p id="display-name"></p>
-        <p id="display-email"></p>
-        <p id="display-education"></p>
-        <p id="display-work"></p>
-        <p id="display-skills"></p>
+        <p id="display-name" contenteditable="true"></p>
+        <p id="display-email" contenteditable="true"></p>
+        <p id="display-education" contenteditable="true"></p>
+        <p id="display-work" contenteditable="true"></p>
+        <p id="display-skills" contenteditable="true"></p>
     </section>
     <!-- Link to JavaScript file (compiled from TypeScript) -->
     <script src="script.js" defer></script>
